@@ -1,0 +1,161 @@
+@import "../../breakpoints.scss";
+@import "../../var.scss";
+
+.landingPage {
+  padding: 40px 20px 26px 20px;
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(0deg, $secondaryLightPink, $secondaryLightPink), $other01;
+
+  @media screen and (max-width: $mobile) {
+    padding: 28px 27px 14px 27px;
+  }
+
+  > .content {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "a a"
+    "b b"
+    "c c";
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-areas:
+        "b a"
+        "b a"
+        "b c";
+    }
+
+    > .header {
+      grid-area: a;
+      
+      @media screen and (min-width: $tablet) {
+        transform: translateY(-80px);
+        align-self: end;
+        justify-self: end;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+
+      > .title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @media screen and (min-width: $tablet) {
+          align-items: flex-end;
+        }
+        
+        > .text {
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 64px;
+          color: $primaryDarkBlue;
+
+          &_purple {
+            background: linear-gradient(90deg, $primaryPurple 24.2%, $primaryPink 120.46%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+
+          @media screen and (max-width: $mobile) {
+            font-size: 36px;
+            line-height: 41px;
+          }
+        }
+      }
+
+      > .subTitle {
+        max-width: 521px;
+        margin-top: 16px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet) {
+          text-align: end;
+        }
+
+        > .text {
+          font-weight: 300;
+          font-size: 24px;
+          line-height: 28px;
+          color: $neutrals01;
+
+          @media screen and (max-width: $mobile) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    
+    > .bodyImg{
+      grid-area: b;
+      margin-top: 20px;
+
+      @media screen and (min-width: $tablet) {
+        align-items: flex-end;
+      }
+      
+      @media screen and (max-width: $mobile) {
+        margin-top: 5px;
+      }
+
+
+      > .img {
+        object-fit: cover;
+        width: 340px;
+        height: 610px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $tablet) {
+          width: 470px;
+          height: 835px;
+        }
+
+        @media screen and (max-width: $mobile) {
+          width: 175px;
+          height: 352px;
+        }
+      }
+    }
+
+    > .eventBtn {
+      grid-area: c;
+      margin-top: 15px;
+      justify-self: center;
+
+      @media screen and (min-width: $tablet) {
+        transform: translateY(-80px);
+        justify-self: end;
+        padding-top: 30px;
+      }
+
+      @media screen and (max-width: $mobile) {
+         margin-top: 5px;
+      }
+
+      > .btn {
+        padding: 11px 60.5px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, $primaryPurple 3.25%, $primaryPink 100%);
+
+        @media screen and (max-width: $mobile) {
+          padding: 16px 21px;
+        }
+
+        > .img {
+          object-fit: cover;
+          transform: translateY(3px);
+          
+          @media screen and (max-width: $mobile) {
+            width: 145px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

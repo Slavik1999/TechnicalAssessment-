@@ -1,0 +1,62 @@
+@import "../../../../var.scss";
+
+.picker {
+  position: relative;
+
+  &_inner {
+    input {
+      height: 48px !important;
+      border: 1px solid $neutrals02 !important;
+      border-radius: 8px !important;
+      color: #7E808F !important;
+      font-size: 16px !important;
+      background-color: $neutrals04;
+  
+      &:hover {
+        border-color: $neutrals01;
+        transition: border-color 0.05s linear;
+        background-color: $neutrals04;
+      }
+  
+  
+      &:focus {
+        border: 1px solid $primaryBlue !important;
+        box-shadow: 0 0 8px 4px rgba(20, 0, 255, 0.07) !important;
+        transition: box-shadow 0.13s ease-in-out !important;
+        background-color: $neutrals04;
+  
+        &:hover {
+          border-color: $primaryBlue;
+          background-color: $neutrals04;
+        }
+      }
+    }
+
+    &_error {
+      input {
+        border-color: $alertRed !important;
+      }
+    }
+  }
+
+  &_label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &_disabled {
+    opacity: 0.5;
+  }
+
+  &_error {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: $alertRed;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

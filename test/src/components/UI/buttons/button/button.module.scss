@@ -1,0 +1,219 @@
+@import "../../../../var.scss";
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.1s ease-in-out !important;
+  text-decoration: none;
+
+  &__childrenWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 0 6px;
+
+    // span {
+    //   padding-right: 5px;
+    // }
+  }
+
+  &_small {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &_medium {
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &_large {
+    height: 56px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__contained {
+    background-color: $primaryBlue;
+    color: $white;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background-color: $primaryBlue;
+      transition: inherit;
+    }
+
+    &:active {
+      background-color: $primaryBlue;
+      transition: inherit;
+    }
+
+    &:focus {
+      box-shadow: 0 0 8px 4px rgba(20, 0, 255, 0.07) !important;
+      transition: inherit;
+    }
+
+    &_active {
+      background-color: $primaryBlue;
+      transition: inherit;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+      }
+
+      &:active {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+      }
+    }
+
+    &_inActive {
+      background-color: $primaryBlue;
+      box-shadow: none;
+      opacity: 0.3;
+      transition: inherit;
+
+      &:hover {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+      }
+
+      &:active {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+      }
+    }
+
+  }
+
+  &__outlined {
+    border: 1px solid $primaryBlue;
+    color: $primaryBlue;
+    background-color: transparent;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background-color: $primaryBlue;
+      transition: inherit;
+      color: white;
+    }
+
+    &:active {
+      background-color: $primaryBlue;
+      transition: inherit;
+      color: white;
+    }
+
+    &:focus {
+      box-shadow: 0 0 8px 4px rgba(20, 0, 255, 0.07) !important;
+      transition: inherit;
+    }
+
+    &_active {
+      background-color: $primaryBlue;
+      transition: inherit;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+        color: inherit;
+      }
+
+      &:active {
+        background-color: $primaryBlue;
+        box-shadow: inherit;
+        color: inherit;
+      }
+    }
+
+    &_inActive {
+      border: 1px solid $primaryBlue;
+      background-color: transparent;
+      color: $primaryBlue;
+      transition: all 0.1s linear;
+      box-shadow: none;
+      opacity: 0.3;
+
+      &:hover {
+        box-shadow: inherit;
+        border: 1px solid $primaryBlue;
+        background-color: transparent;
+        color: $primaryBlue;
+      }
+
+      &:active {
+        box-shadow: inherit;
+        border: 1px solid $primaryBlue;
+        background-color: transparent;
+        color: $primaryBlue;
+      }
+    }
+  }
+
+  &__additional {
+    background-color: $other08;
+    border: 1px solid $other08;
+    color: #333333;
+    transition: all 0.1s linear;
+
+    &:hover {
+      background-color: $other09;
+      transition: inherit;
+    }
+
+    &:active {
+      background-color: $other08;
+      transition: inherit;
+    }
+
+    &:focus {
+      box-shadow: 0 0 8px 4px rgba(20, 0, 255, 0.02) !important;
+      transition: inherit;
+    }
+
+    &_active {
+      background-color: $other08;
+      transition: inherit;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $other08;
+        box-shadow: inherit;
+      }
+
+      &:active {
+        background-color: $other08;
+        box-shadow: inherit;
+      }
+    }
+
+    &_inActive {
+      background-color: $other08;
+      box-shadow: none;
+      opacity: 0.3;
+      transition: inherit;
+
+      &:hover {
+        background-color: $other08;
+        box-shadow: inherit;
+      }
+
+      &:active {
+        background-color: $other08;
+        box-shadow: inherit;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,48 @@
+@import "../../breakpoints.scss";
+@import "../../var.scss";
+
+.createPage {
+  > .content {
+    > .form {
+      > .form_input {
+        margin-top: 8px;
+    
+        &_disabled {
+            pointer-events: none;
+        }
+      }
+    
+      > .file_input {
+          margin-top: 16px;
+      }
+      
+      > .form_btns {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    
+        > .cancelBtn {
+            width: 128px;
+            margin-right: 24px;
+            padding: 8px;
+            background: $neutrals03;
+            border: 1px solid $neutrals02;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: $black;
+        }
+    
+        > .form_btn {
+            padding: 0 40px;
+            height: 40px;
+            
+            &_reset {
+                background-color: $alertRed;
+                margin-right: 8px;
+            }
+        }
+      }
+    }
+  }
+}
